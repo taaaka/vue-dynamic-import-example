@@ -31,6 +31,10 @@ export default class Main extends Vue {
     return this.$route.params.p_config;
   }
 
+  mounted() {
+    this.onChangeRoute();
+  }
+
   @Watch("configName")
   onChangeRoute() {
     switch (this.configName) {
